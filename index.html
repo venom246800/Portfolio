@@ -11,7 +11,7 @@
 <div id="header">
     <div class="container">
         <nav>
-            <img src="images/logo1.png" class="logo">
+            <h1>VENOM246800</h1>
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
@@ -26,19 +26,118 @@
         </div>
     </div>
 </div>
+<!-- ------------------about-------------- -->
 <div id="about">
     <div class="container">
         <div class="row">
             <div class="about-col-1">
-                <img src="images/user.png">
+                <img src="user.png">
             </div>
             <div class="about-col-2">
-                <h1>About Me</h1>
+                <h1 class="sub-title">About Me</h1>
+                <p>Experienced and detail-oriented Java Developer with a passion for creating scalable and efficient software solutions. Adept at leveraging a diverse skill set to contribute to the development and enhancement of cutting-edge applications.</p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Java</span>
+                            <br>Java EE | Spring boot | Spring boot MVC  | Hibernate | JPA
+                            <br>OOPs | Mutlithreading | REST-API | Streams | Lamdas 
+                            <br>Microservices | JUnit | Log4j | Swagger
+                        </li>
+                        <li><span>Problem Solving</span>
+                            <br>Data Structures | Algorithms | Competitive Coder | System Design LLD & HLD
+                        </li>
+                        <li><span>Tools</span>
+                            <br>Maven | Jira | Docker | Kubernate | Git | GitHub
+                        </li>
+                        <li><span>Database</span>
+                            <br>MySQL | PostgreSQL | MongoDB 
+                        </li>
+                        <li><span>Operating System</span>
+                            <br>Maven | Jira | Docker | Kubernate
+                        </li>
+                        <li><span>IDE</span>
+                            <br>Eclipse | Intellij Idea | Spring Tool Suite | Visual Studio Code
+                        </li>
+                        
+                        <li><span>Python</span>
+                            <br> Numpy | Pandas | Sklearn | Exploratory Data Analysis  
+                        </li>
+                        
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>Tata Consultancy Services, Noida - Java Developer</span>
+                            <br>August 2020 - Present
+                            <ul>
+                                <li>Played a key role in developing and maintaining enterprise level -applications using Java and Spring Boot .</li>
+                                <li>Collaborated with cross functional teams to analyze requirements - ,
+                                    design software solutions and implement them using best , 
+                                    practices
+                                    </li>
+                                <li>Streamlined database queries decreasing query execution time by , 
+                                    10% through query optimization techniques including query 
+                                    rewriting and indexing .</li>
+                                <li>Utilized Git and GitHub for version control and collaborative 
+                                    development.</li>
+                                <li>Increased application scalability by redesigning system architecture ,
+                                    utilizing techniques such as microservices architecture and load 
+                                    balancing resulting in the ability to handle more concurrent , 20% 
+                                    users.</li>
+                                <li>Implemented and optimized algorithms and data structures to 
+                                    improve application performance .</li>
+                                <li>Implemented unit tests and performed code reviews to ensure 
+                                    code quality and maintainability</li>
+                            </ul>
+                        </li>
+                        <li><span>Fidelity International, Gurugram - Technology Intern</span>
+                            <br>June 2019 - July 2019
+                            <ul>
+                                <li>Collaborated with experts across a range of domains to 12+ 
+                                    identify and study data sets to produce visuals and other tools .</li>
+                                <li>Assisted developing product roadmaps providing specific , 
+                                    suggestions that led to a decrease in the overall timeline 10% .</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>Deenbandhu Chhotu Ram University of Science and Technology, Murthal</span>
+                            <br>Degree: Bachelor of Technology
+                            <br>Field: Computer Science Engineering
+                            <br>Year: 2016 - 2020
+                            <br>CGPA: 7.05</li>
+                        <li><span>Kendriya Vidyalaya Jhajjar</span>
+                            <br>Degree: 12th Class
+                            <br>Field: Science with Non-Medical
+                            <br>Year: 2015 - 2016
+                            <br>Percentage: 82.8</li>                    
+                        </ul>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
-
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
 </body>
 </html>

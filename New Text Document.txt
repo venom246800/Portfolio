@@ -1,0 +1,4 @@
+git add .
+git commit -m "Message"
+git remote add origin <address> [only once]
+git push -u origin master
